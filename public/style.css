@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Slab", serif;
+  box-sizing: border-box;
+  color: #fff;
+}
+.header-line {
+  border-bottom: 3px solid #159e87;
+  margin: 0 45%;
+}
+.horizontal-line {
+  border-bottom: 0.5px solid #8a8a8a;
+}
+.nav {
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.nav div.logo {
+  float: left;
+}
+.nav div.logo a {
+  font-family: "Parisienne", cursive;
+  color: #fff;
+  font-size: 2rem;
+}
+.nav div.logo a:hover {
+  color: #159e87;
+  text-decoration: none;
+  transition: ease-in 0.3s;
+}
+.nav div.main_list {
+  height: 65px;
+  float: right;
+}
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav div.main_list ul li {
+  height: 65px;
+  padding: 0;
+  padding-right: 3rem;
+}
+.nav div.main_list ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+}
+.nav div.main_list ul li a:hover {
+  transition: ease-in-out 0.4s;
+  border: 3px solid #fff;
+  padding: 10px;
+}
+.nav div.main_list ul li a:active {
+  border: 3px solid #fff;
+  padding: 10px;
+}
+.navTrigger {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+}
+.navTrigger i {
+  background-color: #fff;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.navTrigger i:nth-child(2) {
+  width: 30px;
+  margin: 7px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+.affix {
+  padding: 0;
+  background-color: #000;
+  -webkit-box-shadow: 0 4px 9px -5px rgba(21, 158, 135, 1);
+  -moz-box-shadow: 0 4px 9px -5px rgba(21, 158, 135, 1);
+  box-shadow: 0 4px 9px -5px rgba(21, 158, 135, 1);
+}
+.landing {
+  background-image: url(src/bg-1.JPG);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-box {
+  opacity: 1;
+  letter-spacing: 0.3rem;
+}
+.line-break {
+  margin: 0 10%;
+  border-bottom: 3px solid #159e87;
+}
+.landing-box h2 {
+  background-image: url(https://media.giphy.com/media/UWz4DJj7qYUJq/giphy.gif);
+  background-position: center;
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 80px;
+  margin: 10px 0;
+  padding-top: 10px;
+}
+.landing-box p {
+  font-size: 1.6rem;
+  padding: 40px 0;
+}
+.landing-button a {
+  padding: 10px 40px;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.landing-button a:hover {
+  background-color: #159e87;
+  color: #fff;
+  border: none;
+  transition: ease-in 0.5s;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.landing-icons i {
+  font-size: 2.5rem;
+  margin-top: 40px;
+}
+#about,
+#resume,
+#contact,
+#portfolio {
+  background-color: #0a0a0a;
+  width: 100%;
+  min-height: 100vh;
+}
+.header {
+  padding-top: 80px;
+}
+.header p {
+  font-size: 1rem;
+  color: #8a8a8a;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  padding-bottom: 10px;
+}
+.about-section {
+  padding-top: 100px;
+}
+.about-left {
+  background-image: url(src/about.jpg);
+  width: 100%;
+  min-height: 50vh;
+  margin: 0 40px;
+  background-position: center;
+  background-size: cover;
+}
+.about-right h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #159e87;
+}
+.about-right h2 {
+  font-size: 2.2rem;
+  padding: 20px 0;
+}
+.about-right p {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: #8a8a8a;
+}
+.about-info h4 {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  padding-top: 20px;
+}
+.about-icons {
+  padding-top: 20px;
+}
+.about-button a {
+  padding: 10px 30px;
+  background-color: #159e87;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+.about-icons i {
+  font-size: 2rem;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+.hobbie {
+  background-image: url(src/bg-2.jpg);
+  min-height: 60vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.hobbie-header {
+  padding-top: 40px;
+}
+.hobbie-header h3 {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #159e87;
+  font-size: 2.5rem;
+}
+.hobbie-header p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.hobbie-container {
+  background-color: #333;
+  padding: 40px 0;
+  opacity: 0.9;
+}
+.hobbie-container:hover {
+  background-color: #000;
+  opacity: 1;
+  transition: ease-in 0.5s;
+}
+.hobbie-container img {
+  width: 80px;
+  height: 80px;
+}
+.hobbie-container h3 {
+  padding: 10px 0;
+  font-weight: 600;
+}
+.hobbie-container p {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.resume-education h2,
+.resume-experience h2 {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.resume-card {
+  background-color: #171717;
+  width: 100%;
+  padding: 20px 15px;
+  border-left: 5px solid #159e87;
+  -webkit-box-shadow: 0 0 3px 0 rgba(21, 158, 135, 1);
+  -moz-box-shadow: 0 0 3px 0 rgba(21, 158, 135, 1);
+  box-shadow: 0 0 3px 0 rgba(21, 158, 135, 1);
+}
+.resume-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.resume-card h5 {
+  font-size: 1.2rem;
+  padding: 10px 0;
+  color: #8a8a8a;
+  letter-spacing: 0.1rem;
+}
+.resume-card p {
+  color: #8a8a8a;
+}
+.project-container {
+  padding-top: 30px;
+}
+.project-container img {
+  width: 380px;
+  height: 200px;
+}
+.project-container img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: ease-in 0.3s;
+}
+.project-container h3 {
+  padding-top: 20px;
+  color: #159e87;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.project-container p {
+  padding: 0 30px;
+  text-align: left;
+}
+#quote {
+  background-image: url(src/bg-3.jpg);
+  min-height: 40vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#quote h3 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+.mySlides {
+  display: none;
+  text-align: center;
+  padding-top: 50px;
+}
+.mySlides q {
+  font-size: 1.5rem;
+}
+.mySlides p {
+  padding-top: 10px;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.dot-container {
+  text-align: center;
+  padding: 20px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #159e87;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.contact-left-header {
+  padding-top: 30px;
+}
+.contact-left-header h3,
+.contact-right-header h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.contact-left-header p {
+  font-size: 1.2rem;
+  color: #8a8a8a;
+}
+.contact-info i {
+  color: #159e87;
+  padding-left: 10px;
+  font-size: 2rem;
+  padding-top: 10px;
+}
+.contact-info h4 {
+  padding-left: 30px;
+  font-size: 1.4rem;
+}
+.contact-info p {
+  padding-left: 30px;
+  font-size: 1.1rem;
+  color: #8a8a8a;
+}
+.contact-info a {
+  color: #f2003c;
+}
+.contact-info a:hover {
+  color: #159e87;
+  text-decoration: none;
+  transition: ease-in 0.3s;
+}
+.contact-right-header {
+  padding-top: 30px;
+}
+.contact-form input {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  background-color: #333;
+  margin-top: 20px;
+}
+.contact-form input:focus {
+  outline: none;
+  border-bottom: 3px solid #159e87;
+  transition: ease-in 0.3s;
+}
+.contact-form input[placeholder] {
+  padding-left: 20px;
+}
+.contact-form button {
+  padding: 10px 30px;
+  background-color: #159e87;
+  border: none;
+  color: #fff;
+  margin: 20px 0;
+}
+.footer p {
+  font-family: "Parisienne", cursive;
+  font-size: 1.2rem;
+}
+.fa-github {
+  color: #fff;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-instagram {
+  color: #f2003c;
+}
+.fa-linkedin {
+  color: #0e76a8;
+}
+.wobble,
+.bounce {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.animated .fadeInUp {
+  animation-duration: 10s;
+}
+.js--wp-1,
+.js--wp-2,
+.js--wp-3,
+.js--wp-4,
+.js--wp-5,
+.js--wp-6,
+.js--wp-7,
+.js--wp-8,
+.js--wp-9,
+.js--wp-10,
+.js--wp-11,
+.js--wp-12,
+.js--wp-13,
+.js--wp-about {
+  opacity: 0;
+  transition: linear 1s;
+}
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated,
+.js--wp-4 .animated,
+.js--wp-5 .animated,
+.js--wp-6 .animated,
+.js--wp-7 .animated,
+.js--wp-8 .animated,
+.js--wp-9 .animated,
+.js--wp-10 .animated,
+.js--wp-11 .animated,
+.js--wp-12 .animated,
+.js--wp-13 .animated,
+.js--wp-about .animated {
+  opacity: 1;
+  animation-duration: 5s;
+}
+@media only screen and (max-width: 768px) {
+  .navTrigger {
+    display: block;
+  }
+  .nav div.logo {
+    position: absolute;
+    padding-left: 5px;
+    top: 0;
+    padding-top: 0;
+  }
+  .nav div.logo a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+  .nav div.main_list {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+  }
+  .nav div.show_list {
+    height: auto;
+    display: none;
+  }
+  .nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-position: center top;
+  }
+  .nav div.main_list ul li {
+    position: relative;
+    width: 100%;
+    text-align: right;
+  }
+  .nav div.main_list ul li a {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+  .nav div.media_button {
+    display: block;
+  }
+  .landing-box h2 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+  .landing-box p {
+    font-size: 1.2rem;
+  }
+  .landing-button a {
+    font-size: 1rem;
+    padding: 15px 30px;
+  }
+  .landing-icons i {
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .about-section {
+    padding-top: 60px;
+  }
+  .header p {
+    font-size: 0.8rem;
+  }
+  .header h2 {
+    font-size: 2rem;
+  }
+  .header-line {
+    margin: 0 30%;
+  }
+  .about-right {
+    margin: 35px;
+  }
+  .about-right h3 {
+    padding-top: 20px;
+    font-size: 1.5rem;
+  }
+  .about-right h2 {
+    font-size: 1.6rem;
+  }
+  .about-right p {
+    font-size: 1rem;
+  }
+  .about-info h4 {
+    font-size: 1rem;
+  }
+  .about-left {
+    margin: 0 60px;
+    height: 200px;
+  }
+  .about-icons a {
+    font-size: 0.8rem;
+  }
+  .about-icons i {
+    font-size: 1.5rem;
+    padding-left: 10px;
+  }
+  .hobbie-header h3 {
+    font-size: 2rem;
+  }
+  .hobbie-header p {
+    font-size: 1.2rem;
+  }
+  .resume-experience {
+    padding: 40px 0;
+  }
+  #portfolio {
+    padding-bottom: 20px;
+  }
+  .project-container img {
+    width: 300px;
+    height: 150px;
+  }
+  .project-container p {
+    padding: 0;
+  }
+  .contact-info h4 {
+    font-size: 1.1rem;
+  }
+  .contact-info p {
+    font-size: 0.8rem;
+  }
+  #quote h3 {
+    padding-top: 30px;
+  }
+  .mySlides q {
+    font-size: 1.2rem;
+  }
+}
