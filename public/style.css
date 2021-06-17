@@ -488,7 +488,7 @@
   color: #0e76a8;
 }
 .wobble,
-.bounce {
+.heartBeat {
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
